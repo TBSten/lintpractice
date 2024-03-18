@@ -35,7 +35,7 @@ fun greeting(
 ) {
     Text(
         text = "Hello $name!",
-        fontSize = 32.sp,
+        fontSize = 32.sp
     )
 }
 
