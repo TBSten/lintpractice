@@ -13,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import me.tbsten.lintpractice.ui.theme.LintpracticeTheme
 
-class MainActivity : ComponentActivity() {
+class Main_Activity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
