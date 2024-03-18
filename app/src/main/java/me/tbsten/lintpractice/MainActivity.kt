@@ -32,18 +32,16 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(
     name: String,
-    modifier: Modifier = Modifier,
 ) {
     Text(
         text = "Hello $name!",
-        modifier = modifier,
-        fontSize = 32.sp,
+        fontSize = 32.sp
     )
 }
 
 @Preview(showBackground = true)
 @Composable
-private fun GreetingPreview() {
+fun GreetingPreview() {
     LintpracticeTheme {
         Greeting("Android")
     }
