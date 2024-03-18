@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    Greeting("Android")
+                    greeting("Android")
                 }
             }
         }
@@ -30,21 +30,21 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(
+fun greeting(
     name: String,
-    modifier: Modifier = Modifier,
+    modifier: Modifier=Modifier
 ) {
     Text(
         text = "Hello $name!",
         modifier = modifier,
-        fontSize = 32.sp,
+        fontSize = 32.sp
     )
 }
 
 @Preview(showBackground = true)
 @Composable
-private fun GreetingPreview() {
+private fun greetingPreview() {
     LintpracticeTheme {
-        Greeting("Android")
+        greeting("Android")
     }
 }
