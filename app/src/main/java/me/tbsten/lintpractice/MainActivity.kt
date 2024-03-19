@@ -22,17 +22,18 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    Greeting("Android")
+                    Greeting(name = "Android")
                 }
             }
         }
     }
 }
 
+// TODO composableの引数の順序がよろしくない refs:https://slackhq.github.io/compose-lints/rules/#ordering-composable-parameters-properly
 @Composable
 fun Greeting(
-    name: String,
     modifier: Modifier = Modifier,
+    name: String,
 ) {
     Text(
         text = "Hello $name!",
@@ -43,8 +44,8 @@ fun Greeting(
 
 @Preview(showBackground = true)
 @Composable
-private fun GreetingPreview() {
+fun GreetingPreview() { // TODO Preview は private にする必要がある refs:https://slackhq.github.io/compose-lints/rules/#preview-composables-should-not-be-public
     LintpracticeTheme {
-        Greeting("Android")
+        Greeting(name = "Android")
     }
 }
